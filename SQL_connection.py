@@ -1,6 +1,7 @@
 import pyodbc
 
-def connection(driver='SQL Server', server_name='lap-ds\sql2014', database_name='CDN_Prezentacja_KH',
+def connection(driver='SQL Server Native Client 11.0', server_name='lap-ds\sql2014',
+               database_name='CDN_Prezentacja_KH',
                trusted_connection='yes'):
 
     conn = pyodbc.connect(f'Driver={driver};'
@@ -12,4 +13,5 @@ def connection(driver='SQL Server', server_name='lap-ds\sql2014', database_name=
     print('Inside connection function')
     return cursor
 
+connection()
 print('test')
