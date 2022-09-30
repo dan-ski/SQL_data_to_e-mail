@@ -13,5 +13,12 @@ def connection(driver='SQL Server Native Client 11.0', server_name='lap-ds\sql20
     print('Inside connection function')
     return cursor
 
-connection()
+cursor = connection()
+
+def execute_query(cursor, query):
+    cursor.execute(query)
+
+    return
+
+
 print('test')
